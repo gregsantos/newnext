@@ -1,0 +1,1 @@
+{"ast":null,"code":"// Fake users data\nconst users = [{\n  id: 1,\n  name: 'Greg'\n}, {\n  id: 2,\n  name: 'Sophia'\n}, {\n  id: 3,\n  name: 'Marie'\n}];\nexport default ((req, res) => {\n  // Get data from your database\n  res.status(200).json(users);\n});","map":null,"metadata":{},"sourceType":"module"}

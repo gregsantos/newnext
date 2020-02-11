@@ -1,0 +1,5 @@
+{
+  "env": {
+    "API_URL": "@my_api_url"
+  }
+}
