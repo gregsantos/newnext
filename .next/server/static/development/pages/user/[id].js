@@ -88,10 +88,25 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./config/index.js":
+/*!*************************!*\
+  !*** ./config/index.js ***!
+  \*************************/
+/*! exports provided: server */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "server", function() { return server; });
+const dev = true;
+const server = dev ? 'http://localhost:3000' : 'https://newnext.gregsantos.now.sh';
+
+/***/ }),
 
 /***/ "./pages/user/[id].js":
 /*!****************************!*\
@@ -106,9 +121,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../config */ "./config/index.js");
 var _jsxFileName = "/Users/GMS/Dev/next/newnext/pages/user/[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 const User = ({
@@ -116,7 +133,7 @@ const User = ({
 }) => __jsx("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 3
+    lineNumber: 4
   },
   __self: undefined
 }, user.name);
@@ -126,18 +143,25 @@ User.getInitialProps = async ({
     id
   }
 }, res) => {
-  const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default()(`http://localhost:3000/api/user/${id}`);
+  const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default()(`${_config__WEBPACK_IMPORTED_MODULE_2__["server"]}/api/user/${id}`);
   const user = await response.json();
+  console.log(user);
   return {
-    user
+    user: user
   };
+  /*   const protocol = req ? req.headers['x-forwarded-proto'] || 'http' : ''
+  const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
+  const response = await fetch(`${baseUrl + '/api/user/' + id}`)
+  //  const response = await fetch(`http://localhost:3000/api/user/${id}`)
+  const user = await response.json()
+   return { user } */
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (User);
 
 /***/ }),
 
-/***/ 9:
+/***/ 6:
 /*!**********************************!*\
   !*** multi ./pages/user/[id].js ***!
   \**********************************/

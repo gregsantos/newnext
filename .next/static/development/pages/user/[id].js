@@ -1,5 +1,20 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/user/[id].js"],{
 
+/***/ "./config/index.js":
+/*!*************************!*\
+  !*** ./config/index.js ***!
+  \*************************/
+/*! exports provided: server */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "server", function() { return server; });
+var dev = true;
+var server = dev ? 'http://localhost:3000' : 'https://newnext.gregsantos.now.sh';
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/regenerator/index.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/regenerator/index.js ***!
@@ -810,10 +825,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config */ "./config/index.js");
 
 var _jsxFileName = "/Users/GMS/Dev/next/newnext/pages/user/[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 var User = function User(_ref) {
@@ -821,7 +838,7 @@ var User = function User(_ref) {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 4
     },
     __self: this
   }, user.name);
@@ -835,7 +852,7 @@ User.getInitialProps = function _callee(_ref2, res) {
         case 0:
           id = _ref2.query.id;
           _context.next = 3;
-          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()("http://localhost:3000/api/user/".concat(id)));
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["server"], "/api/user/").concat(id)));
 
         case 3:
           response = _context.sent;
@@ -844,11 +861,12 @@ User.getInitialProps = function _callee(_ref2, res) {
 
         case 6:
           user = _context.sent;
+          console.log(user);
           return _context.abrupt("return", {
             user: user
           });
 
-        case 8:
+        case 9:
         case "end":
           return _context.stop();
       }
@@ -860,7 +878,7 @@ User.getInitialProps = function _callee(_ref2, res) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 2:
 /*!**************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fuser%2F%5Bid%5D&absolutePagePath=%2FUsers%2FGMS%2FDev%2Fnext%2Fnewnext%2Fpages%2Fuser%2F%5Bid%5D.js ***!
   \**************************************************************************************************************************************************/
@@ -883,5 +901,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
