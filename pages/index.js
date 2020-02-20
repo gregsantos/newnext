@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import styled from 'styled-components'
 import Head from '../components/head'
 import Nav from '../components/nav'
+
+const Title = styled.h1`
+  font-size: 50px;
+  color: ${({ theme }) => theme.colors.primary};
+`
 
 const Index = ({ users }) => {
   const [date, setDate] = useState(null)
@@ -18,6 +24,7 @@ const Index = ({ users }) => {
 
   return (
     <div>
+      <Title>WU TANG ♾️</Title>
       <Link href='/todos'>
         <a>Todos Page</a>
       </Link>
