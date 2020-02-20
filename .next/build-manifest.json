@@ -29,6 +29,10 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/todos": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/user/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

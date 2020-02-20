@@ -122,10 +122,10 @@ const Index = ({ users }) => {
 }
 
 Index.getInitialProps = async ({ req }) => {
-  const protocol = req ? req.headers['x-forwarded-proto'] || 'http' : ''
-  const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
   // const baseUrl = req ? `${req.protocol}://${req.headers.host}` : ''
   // const baseUrl = req ? `${req.headers.referer}` : ''
+  const protocol = req ? req.headers['x-forwarded-proto'] || 'http' : ''
+  const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
   const response = await fetch(`${baseUrl + '/api/users'}`)
   const users = await response.json()
 

@@ -1,9 +1,4 @@
-// Fake users data
-const users = [
-  { id: 1, name: 'Greg' },
-  { id: 2, name: 'Sophia' },
-  { id: 3, name: 'Marie' },
-]
+import { users } from '../../db'
 
 export default (req, res) => {
   // Get data from your database

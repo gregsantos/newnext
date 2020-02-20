@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "server", function() { return server; });
 var dev = true;
-var server = dev ? 'http://localhost:3000' : 'https://newnext.gregsantos.now.sh';
+var server = dev ? 'http://localhost:3000' : 'https://newnext.now.sh';
 
 /***/ }),
 
@@ -844,7 +844,7 @@ var User = function User(_ref) {
   }, user.name);
 };
 
-User.getInitialProps = function _callee(_ref2, res) {
+User.getInitialProps = function _callee(_ref2, req) {
   var id, response, user;
   return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
     while (1) {
@@ -861,12 +861,11 @@ User.getInitialProps = function _callee(_ref2, res) {
 
         case 6:
           user = _context.sent;
-          console.log(user);
           return _context.abrupt("return", {
             user: user
           });
 
-        case 9:
+        case 8:
         case "end":
           return _context.stop();
       }
@@ -878,7 +877,7 @@ User.getInitialProps = function _callee(_ref2, res) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!**************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fuser%2F%5Bid%5D&absolutePagePath=%2FUsers%2FGMS%2FDev%2Fnext%2Fnewnext%2Fpages%2Fuser%2F%5Bid%5D.js ***!
   \**************************************************************************************************************************************************/
@@ -901,5 +900,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map

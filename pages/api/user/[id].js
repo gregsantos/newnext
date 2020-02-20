@@ -1,13 +1,15 @@
+import { users } from '../../../db'
+
 export default (req, res) => {
   const {
-    query: { id, name },
+    query: { id },
     method,
   } = req
 
   switch (method) {
     case 'GET':
       // Get data from your database
-      res.status(200).json({ id, name: `User ${id}` })
+      res.status(200).json({ id, name: `User ${users[id].name}` })
       break
     case 'PUT':
       // Update or create data in your database

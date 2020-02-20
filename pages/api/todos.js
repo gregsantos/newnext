@@ -2,10 +2,10 @@
 const todos = [
   {
     id: 1,
-    text: 'Buy milk',
+    text: 'Learn React',
   },
-  { id: 2, text: 'Do laundry' },
-  { id: 3, text: 'Pick up Dinner' },
+  { id: 2, text: 'Learn Next.js' },
+  { id: 3, text: 'Profit' },
 ]
 
 export default (req, res) => {

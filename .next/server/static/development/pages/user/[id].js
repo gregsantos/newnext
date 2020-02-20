@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -104,7 +104,7 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "server", function() { return server; });
 const dev = true;
-const server = dev ? 'http://localhost:3000' : 'https://newnext.gregsantos.now.sh';
+const server = dev ? 'http://localhost:3000' : 'https://newnext.now.sh';
 
 /***/ }),
 
@@ -142,26 +142,19 @@ User.getInitialProps = async ({
   query: {
     id
   }
-}, res) => {
+}, req) => {
   const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default()(`${_config__WEBPACK_IMPORTED_MODULE_2__["server"]}/api/user/${id}`);
   const user = await response.json();
-  console.log(user);
   return {
     user: user
   };
-  /*   const protocol = req ? req.headers['x-forwarded-proto'] || 'http' : ''
-  const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
-  const response = await fetch(`${baseUrl + '/api/user/' + id}`)
-  //  const response = await fetch(`http://localhost:3000/api/user/${id}`)
-  const user = await response.json()
-   return { user } */
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (User);
 
 /***/ }),
 
-/***/ 6:
+/***/ 9:
 /*!**********************************!*\
   !*** multi ./pages/user/[id].js ***!
   \**********************************/

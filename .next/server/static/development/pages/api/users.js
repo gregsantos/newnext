@@ -88,10 +88,33 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./db.js":
+/*!***************!*\
+  !*** ./db.js ***!
+  \***************/
+/*! exports provided: users */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "users", function() { return users; });
+const users = [{
+  id: 0,
+  name: 'Rza'
+}, {
+  id: 1,
+  name: 'Gza'
+}, {
+  id: 2,
+  name: 'Meth'
+}];
+
+/***/ }),
 
 /***/ "./pages/api/users.js":
 /*!****************************!*\
@@ -102,25 +125,16 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Fake users data
-const users = [{
-  id: 1,
-  name: 'Greg'
-}, {
-  id: 2,
-  name: 'Sophia'
-}, {
-  id: 3,
-  name: 'Marie'
-}];
+/* harmony import */ var _db__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../db */ "./db.js");
+
 /* harmony default export */ __webpack_exports__["default"] = ((req, res) => {
   // Get data from your database
-  res.status(200).json(users);
+  res.status(200).json(_db__WEBPACK_IMPORTED_MODULE_0__["users"]);
 });
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!**********************************!*\
   !*** multi ./pages/api/users.js ***!
   \**********************************/
