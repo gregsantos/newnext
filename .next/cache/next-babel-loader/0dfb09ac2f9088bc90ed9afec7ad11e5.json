@@ -1,1 +1,0 @@
-{"ast":null,"code":"export default ((req, res) => {\n  const date = new Date().toISOString().replace(/T/, ' ').replace(/\\..+/, '');\n  res.json({\n    date\n  });\n});","map":null,"metadata":{},"sourceType":"module"}

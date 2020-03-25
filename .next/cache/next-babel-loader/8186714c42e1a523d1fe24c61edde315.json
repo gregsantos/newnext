@@ -1,1 +1,0 @@
-{"ast":null,"code":"// Fake todos data\nconst todos = [{\n  id: 1,\n  text: 'Buy milk'\n}, {\n  id: 2,\n  text: 'Do laundry'\n}, {\n  id: 3,\n  text: 'Pick up Dinner'\n}];\nexport default ((req, res) => {\n  // Get data from your database\n  res.status(200).json(todos);\n});","map":null,"metadata":{},"sourceType":"module"}

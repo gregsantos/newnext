@@ -3,7 +3,7 @@ import { server } from '../../config'
 
 const User = ({ user }) => <div>{user.name}</div>
 
-User.getInitialProps = async ({ query: { id } }, req) => {
+User.getInitialProps = async ({ query: { id } }) => {
   const response = await fetch(`${server}/api/user/${id}`)
   const user = await response.json()
 
